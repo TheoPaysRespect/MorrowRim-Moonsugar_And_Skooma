@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="RoughPlantBase">
+		<defName>MorrowRim_RawMoonSugarCane</defName>
+		<label>moon sugar cane</label>
+		<description>Raw cane from a moon sugar cane plant. Can be refined into moon sugar, and further refined into skooma.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/MorrowRim_RawMoonCane</texPath>
+		</graphicData>
+		<statBases>
+		  <MarketValue>1.9</MarketValue>
+		  <Flammability>1.3</Flammability>
+		</statBases>
+		<comps>
+		  <li Class="CompProperties_Rottable">
+			<daysToRotStart>30</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		  </li>
+		</comps>
+		<thingCategories>
+		  <li>PlantMatter</li>
+		</thingCategories>
+		<ingestible>
+		  <preferability>DesperateOnly</preferability>
+		</ingestible>
+	</ThingDef>
+  
+</Defs>

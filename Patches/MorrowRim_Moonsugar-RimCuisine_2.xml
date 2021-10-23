@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- provided by baldamundo -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RimCuisine 2 Core (Continued)</li>
+		</mods> 
+				
+		<match Class="PatchOperationSequence">
+			<operations>
+		
+			  <li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "MorrowRim_RawMoonSugarCane"]/thingCategories</xpath>
+				<value>
+					<li>RC2_SweetsRaw</li>
+				</value>
+			  </li>
+			  <!-- moonsugar is a drug with 0 nutrition, so adding it doesn't work in the RC2 recipes which require nutrition		  
+				<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "MorrowRim_MoonSugar"]</xpath>
+				<value>
+				  <thingCategories>
+					<li>RC2_SweetsProcessed</li>
+				  </thingCategories>
+				</value>
+			  </li>
+
+			  -->
+   
+   			  <li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "RC2_ProcessSugarcaneBulk"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>MorrowRim_RawMoonSugarCane</li>
+				</value>
+			  </li>
+			  <li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "RC2_ProcessSugarcaneBulk"]/defaultIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>MorrowRim_RawMoonSugarCane</li>
+				</value>
+			  </li>
+			  <li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "RC2_ProcessSugarcaneBulk"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<li>MorrowRim_RawMoonSugarCane</li>
+				</value>
+			  </li>
+			  
+			  <li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "RC2_ProcessSugarcane"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>MorrowRim_RawMoonSugarCane</li>
+				</value>
+			  </li>
+			  <li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "RC2_ProcessSugarcane"]/defaultIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>MorrowRim_RawMoonSugarCane</li>
+				</value>
+			  </li>
+			  <li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "RC2_ProcessSugarcane"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<li>MorrowRim_RawMoonSugarCane</li>
+				</value>
+			  </li>
+			  </operations>
+		</match>
+	</Operation>
+	
+</Patch>
