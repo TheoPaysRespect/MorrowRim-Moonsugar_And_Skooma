@@ -2,19 +2,18 @@
 <Defs>
 
   <ThingDef ParentName="MakeableDrugBase">
-    <defName>Skoomax</defName>
-    <label>skoomax</label>
-    <description>Moon sugar refined with chemfuel, has a kick to it that will literally knock you of your feet. Very powerful and highly addictive. Minor risk of heart attacks. Can be consumed a number of ways, most often using a pipe. Continued use can have dangerous side effects.\n\nThe addition of chemfuel produces a product somewhat similar to redwater skooma, which was used in underground blood farms to subdue 'guests'.</description>
+    <defName>DoubleDistilledSkooma</defName>
+    <label>double distilled skooma</label>
+    <description>Skooma distilled an additional time, increasing potency by a reasonable amount. Consumption gives a large boost of energy, but eventually leaves one feeling more fatigued than before. Can be consumed a number of ways, most often using a pipe. Continued use can have dangerous side effects.</description>
     <descriptionHyperlinks>
-      <HediffDef>SkoomaxHigh</HediffDef>
+      <HediffDef>SkoomaHigh</HediffDef>
       <HediffDef>SkoomaTolerance</HediffDef>
       <HediffDef>SkoomaAddiction</HediffDef>
       <HediffDef>ChemicalDamageSevere</HediffDef>
 	  <HediffDef>Dementia</HediffDef>
-	  <HediffDef>HeartAttack</HediffDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Drug/MorrowRim_RedWaterSkooma</texPath>
+      <texPath>Things/Item/Drug/MorrowRim_DoubleDistilledSkooma</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.88</drawSize>
     </graphicData>
@@ -22,15 +21,15 @@
 	<stackLimit>75</stackLimit>
     <statBases>
       <WorkToMake>400</WorkToMake>
-      <MarketValue>70</MarketValue>
+      <MarketValue>60</MarketValue>
       <Mass>0.05</Mass>
       <DeteriorationRate>6</DeteriorationRate>
     </statBases>
-	<techLevel>Medieval</techLevel>
+	<techLevel>Neolithic</techLevel>
     <ingestible>
       <foodType>Fluid, Processed</foodType>
       <joyKind>Chemical</joyKind>
-      <joy>0.90</joy>
+      <joy>0.80</joy>
       <baseIngestTicks>240</baseIngestTicks>
       <nurseable>true</nurseable>
       <drugCategory>Hard</drugCategory>
@@ -47,18 +46,18 @@
       <useEatingSpeedStat>false</useEatingSpeedStat>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>SkoomaxHigh</hediffDef>
-          <severity>0.9</severity>
-          <toleranceChemical>MorrowRim_Skoomax</toleranceChemical>
+          <hediffDef>DoubleDistilledSkoomaHigh</hediffDef>
+          <severity>0.93</severity>
+          <toleranceChemical>MorrowRim_Skooma</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
-          <offset>0.6</offset>
-          <toleranceChemical>MorrowRim_Skoomax</toleranceChemical>
+          <offset>1.0</offset>
+          <toleranceChemical>MorrowRim_Skooma</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>SkoomaTolerance</hediffDef>
-          <severity>0.1</severity>
+          <severity>0.06</severity>
           <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
@@ -70,13 +69,12 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <MorrowRim_MoonSugar>4</MorrowRim_MoonSugar>
-	  <Chemfuel>1</Chemfuel>
+      <Skooma>1</Skooma>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
-        <chemical>MorrowRim_Skoomax</chemical>
-        <addictiveness>0.2</addictiveness>
+        <chemical>MorrowRim_Skooma</chemical>
+        <addictiveness>0.15</addictiveness>
         <minToleranceToAddict>0.00</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>1</needLevelOffset>
@@ -88,10 +86,10 @@
   </ThingDef>
   
   <HediffDef>
-    <defName>SkoomaxHigh</defName>
-    <label>high on skoomax</label>
-    <labelNoun>a skoomax high</labelNoun>
-    <description>Active skoomax in the bloodstream. Generates a extreme euphoric effect.</description>
+    <defName>DoubleDistilledSkoomaHigh</defName>
+    <label>high on double distilled skooma</label>
+    <labelNoun>a double distilled skooma high</labelNoun>
+    <description>Active skooma in the bloodstream. Generates a powerful euphoric effect.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -104,12 +102,12 @@
     </comps>
       <stages>
         <li>
-          <painOffset>-0.95</painOffset>
-          <restFallFactor>1.8</restFallFactor>
+          <painOffset>-0.60</painOffset>
+          <restFallFactor>2.0</restFallFactor>
 		  <capMods>
 			  <li>
 				<capacity>Consciousness</capacity>
-				<offset>-0.7</offset>
+				<offset>-0.45</offset>
 			  </li>
 			</capMods>
         </li>
@@ -117,15 +115,15 @@
   </HediffDef>
   
   <ThoughtDef>
-    <defName>SkoomaxHigh</defName>
+    <defName>DoubleDistilledSkoomaHigh</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>SkoomaxHigh</hediff>
+    <hediff>DoubleDistilledSkoomaHigh</hediff>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
-        <label>high on skoomax</label>
-        <description>Bloody hell... </description>
-        <baseMoodEffect>80</baseMoodEffect>
+        <label>high on double distilled skooma</label>
+        <description>Stars everywhere... </description>
+        <baseMoodEffect>45</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
