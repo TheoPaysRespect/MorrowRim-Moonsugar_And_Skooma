@@ -16,16 +16,16 @@
 					<value>
 
 						<AchievementsExpanded.AchievementTabDef>
-							<defName>MorrowRim_AchievementsTab</defName>
-							<label>MorrowRim</label>
+							<defName>ESCP_AchievementsTab</defName>
+							<label>ESCP</label>
 						</AchievementsExpanded.AchievementTabDef>
 
 						<AchievementsExpanded.AchievementDef>
 							<defName>MorrowRim_AchievementMoonSugarSeller</defName>
 							<label>Seeing Silver Stars</label>
 							<description>Earn 10,000 silver from selling moon sugar</description>
-							<bgtexPath>Achievements/MorrowRim_AchievementBackground</bgtexPath>
-							<tab>MorrowRim_AchievementsTab</tab>
+							<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+							<tab>ESCP_AchievementsTab</tab>
 							<tracker Class="AchievementsExpanded.TraderTracker">
 								<def>MorrowRim_MoonSugar</def>
 								<worth>10000</worth>
@@ -40,8 +40,8 @@
 							<defName>MorrowRim_AchievementSkooma</defName>
 							<label>I swear it's Just My Cover</label>
 							<description>Obtain 100 bottles of Skooma</description>
-							<bgtexPath>Achievements/MorrowRim_AchievementBackground</bgtexPath>
-							<tab>MorrowRim_AchievementsTab</tab>
+							<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+							<tab>ESCP_AchievementsTab</tab>
 							<tracker Class="AchievementsExpanded.ItemTracker">
 								<def>Skooma</def>
 								<count>100</count>
@@ -68,8 +68,8 @@
 										<defName>MorrowRim_AchievementMoonSugarFarmer</defName>
 										<label>Oh This... it's Just Sugar Cane...</label>
 										<description>Harvest 100 moon sugar cane plants</description>
-										<bgtexPath>Achievements/MorrowRim_AchievementBackground</bgtexPath>
-										<tab>MorrowRim_AchievementsTab</tab>
+										<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+										<tab>ESCP_AchievementsTab</tab>
 										<tracker Class="AchievementsExpanded.PlantTracker">
 											<def>MorrowRim_MoonSugarCane</def>
 
@@ -84,8 +84,8 @@
 										<defName>MorrowRim_AchievementMoonSugarDesert</defName>
 										<label>This Sugar Has a Strange Kick to It</label>
 										<description>Make a Gourmet dessert using cooking grade moon sugar</description>
-										<bgtexPath>Achievements/MorrowRim_AchievementBackground</bgtexPath>
-										<tab>MorrowRim_AchievementsTab</tab>
+										<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+										<tab>ESCP_AchievementsTab</tab>
 										<tracker Class="AchievementsExpanded.ItemCraftTrackerWithIngredients">
 											<def>VCE_GourmetDessert</def>
 											<includeingredient>VCE_MoonSugarCooking</includeingredient>
