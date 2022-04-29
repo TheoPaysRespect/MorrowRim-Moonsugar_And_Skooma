@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>Skoomax</defName>
     <label>skoomax</label>
-    <description>Moon sugar refined with chemfuel, has a kick to it that will literally knock you of your feet. Very powerful and highly addictive. Minor risk of heart attacks. Can be consumed a number of ways, most often using a pipe. Continued use can have dangerous side effects.\n\nThe addition of chemfuel produces a product somewhat similar to redwater skooma, which was used in underground blood farms to subdue 'guests'.</description>
+    <description>Skooma refined a second time, with the addition of a pinch of chemfuel, has a kick to it that will literally knock you of your feet. Very powerful and highly addictive. Minor risk of heart attacks. Can be consumed a number of ways, most often using a pipe. Continued use can have dangerous side effects.\n\nThe addition of chemfuel produces a product somewhat similar to redwater skooma, which was used in underground blood farms to subdue 'guests'.</description>
     <descriptionHyperlinks>
       <HediffDef>SkoomaxHigh</HediffDef>
       <HediffDef>SkoomaTolerance</HediffDef>
@@ -70,7 +70,7 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-      <MorrowRim_MoonSugar>4</MorrowRim_MoonSugar>
+      <Skooma>1</Skooma>
 	  <Chemfuel>1</Chemfuel>
     </costList>
     <comps>
