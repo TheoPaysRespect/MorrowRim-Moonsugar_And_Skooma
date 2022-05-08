@@ -85,6 +85,11 @@
         <largeOverdoseChance>0.015</largeOverdoseChance>
       </li>
     </comps>
+	<tradeTags>
+		<li>ESCP_Skooma</li>
+		<li>ESCP_SkoomaFine</li>
+		<li>ESCP_SkoomaDangerous</li>
+	</tradeTags>
   </ThingDef>
   
   <HediffDef>
