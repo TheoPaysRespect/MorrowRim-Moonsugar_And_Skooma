@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						<ThingDef ParentName="RoughPlantBase">
+							<defName>MorrowRim_VCE_MoonSugarCooking</defName>
+							<label>cooking grade moon sugar</label>
+							<description>Moon sugar specially prepared for use in cooking. Results in a much weaker euphoric effect that reduces pain and dulls the mind, though comes with the added risk of diabetes.</description>
+							<graphicData>
+								<texPath>Things/Item/Drug/MorrowRim_CookingMoonSugar</texPath>
+								<graphicClass>Graphic_StackCount</graphicClass>
+								<drawSize>1</drawSize>
+							</graphicData>
+							<statBases>
+								<MarketValue>4</MarketValue>
+								<Nutrition>0</Nutrition>
+								<Flammability>1.3</Flammability>
+							</statBases>
+							<thingCategories>
+								<li>VCE_Condiments</li>
+							</thingCategories>
+							<ingestible>
+								<preferability>NeverForNutrition</preferability>
+								<specialThoughtAsIngredient>MorrowRim_VCE_MoonSugarHigh</specialThoughtAsIngredient>
+							</ingestible>
+						</ThingDef>
+						<ThoughtDef>
+							<defName>MorrowRim_VCE_MoonSugarHigh</defName>
+							<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+							<hediff>MorrowRim_VCE_MoonSugarHigh</hediff>
+							<validWhileDespawned>true</validWhileDespawned>
+							<stages>
+								<li>
+									<label>consumed moon sugar as a condiment</label>
+									<description>My gums are tingling!</description>
+									<baseMoodEffect>9</baseMoodEffect>
+								</li>
+							</stages>
+							<modExtensions>
+								<li Class="VanillaCookingExpanded.Thought_Hediff_Extension">
+									<hediffToAffect>VCE_Diabetes</hediffToAffect>
+									<partToAffect>Body</partToAffect>
+									<percentage>0.03</percentage>
+								</li>
+							</modExtensions>
+						</ThoughtDef>
+						<HediffDef>
+							<defName>MorrowRim_VCE_MoonSugarHigh</defName>
+							<label>high on cooking grade moon sugar</label>
+							<labelNoun>a cooking grade moon sugar high</labelNoun>
+							<description>Active cooking grade moon sugar in the bloodstream. Generates a weaker euphoric high.</description>
+							<hediffClass>HediffWithComps</hediffClass>
+							<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+							<scenarioCanAdd>true</scenarioCanAdd>
+							<maxSeverity>1.0</maxSeverity>
+							<isBad>false</isBad>
+							<comps>
+								<li Class="HediffCompProperties_SeverityPerDay">
+									<severityPerDay>-3.0</severityPerDay>
+								</li>
+							</comps>
+							<stages>
+								<li>
+									<painOffset>-0.1</painOffset>
+									<capMods>
+										<li>
+											<capacity>Consciousness</capacity>
+											<offset>-0.1</offset>
+										</li>
+									</capMods>
+								</li>
+							</stages>
+						</HediffDef>
+						<RecipeDef>
+							<defName>MorrowRim_VCE_MoonSugarCooking</defName>
+							<label>make cooking grade moon sugar</label>
+							<description>Prepare moon sugar for use in cooking. Consumption produces a weaker response than standard moon sugar, though still has a risk of addiction.</description>
+							<jobString>Making cooking grade moon sugar.</jobString>
+							<workSpeedStat>CookSpeed</workSpeedStat>
+							<effectWorking>Cook</effectWorking>
+							<soundWorking>Recipe_CookMeal</soundWorking>
+							<workAmount>200</workAmount>
+							<recipeUsers>
+								<li>VCE_CondimentPrepTable</li>
+							</recipeUsers>
+							<ingredients>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>MorrowRim_MoonSugar</li>
+										</thingDefs>
+									</filter>
+									<count>5</count>
+								</li>
+							</ingredients>
+							<fixedIngredientFilter>
+								<thingDefs>
+									<li>MorrowRim_MoonSugar</li>
+								</thingDefs>
+							</fixedIngredientFilter>
+							<products>
+								<MorrowRim_VCE_MoonSugarCooking>10</MorrowRim_VCE_MoonSugarCooking>
+							</products>
+							<researchPrerequisite>MorrowRim_MoonSugarCreation</researchPrerequisite>
+						</RecipeDef>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
