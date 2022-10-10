@@ -74,8 +74,8 @@
 	<HediffDef ParentName="AddictionBase">
 		<defName>MorrowRim_SkoomaAddiction</defName>
 		<label>skooma addiction</label>
-		<description>A chemical addiction to skooma. Long-term presence of psychite has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
-			\nWithout regular doses of skooma withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+		<description>A chemical addiction to skooma. Long-term presence of skooma has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+			\nWithout regular doses of skooma, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<causesNeed>MorrowRim_Chemical_Skooma</causesNeed>
 		<comps>
