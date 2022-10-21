@@ -12,7 +12,7 @@
 						<ThingDef ParentName="RoughPlantBase">
 							<defName>MorrowRim_VCE_MoonSugarCooking</defName>
 							<label>cooking grade moon sugar</label>
-							<description>Moon sugar specially prepared for use in cooking. Results in a much weaker euphoric effect that reduces pain and dulls the mind, though comes with the added risk of diabetes.</description>
+							<description>Moon sugar specially prepared for use in cooking. Results in a much weaker euphoric effect that reduces pain and dulls the mind, though still builds up tolerance.</description>
 							<graphicData>
 								<texPath>Things/Item/Drug/MorrowRim_CookingMoonSugar</texPath>
 								<graphicClass>Graphic_StackCount</graphicClass>
@@ -45,9 +45,9 @@
 							</stages>
 							<modExtensions>
 								<li Class="VanillaCookingExpanded.Thought_Hediff_Extension">
-									<hediffToAffect>VCE_Diabetes</hediffToAffect>
+									<hediffToAffect>MorrowRim_MoonSugarTolerance</hediffToAffect>
 									<partToAffect>Body</partToAffect>
-									<percentage>0.03</percentage>
+									<percentage>0.015</percentage>
 								</li>
 							</modExtensions>
 						</ThoughtDef>
