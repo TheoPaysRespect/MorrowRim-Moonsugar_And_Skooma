@@ -14,25 +14,9 @@
 					<li>Kidney</li>
 				</partsToAffect>
 			</li>
-		</onGeneratedAddictedEvents>
-	</ChemicalDef>
-	<ChemicalDef>
-		<defName>MorrowRim_Skoomax</defName>
-		<label>skoomax</label>
-		<addictionHediff>MorrowRim_SkoomaAddiction</addictionHediff>
-		<toleranceHediff>MorrowRim_SkoomaTolerance</toleranceHediff>
-		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
-		<onGeneratedAddictedEvents>
-			<li>
-				<hediff>ChemicalDamageSevere</hediff>
-				<chance>0.30</chance>
-				<partsToAffect>
-					<li>Kidney</li>
-				</partsToAffect>
-			</li>
 			<li>
 				<hediff>HeartAttack</hediff>
-				<chance>0.15</chance>
+				<chance>0.05</chance>
 			</li>
 		</onGeneratedAddictedEvents>
 	</ChemicalDef>
