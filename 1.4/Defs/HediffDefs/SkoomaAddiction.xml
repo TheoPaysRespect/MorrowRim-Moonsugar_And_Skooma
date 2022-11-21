@@ -19,6 +19,8 @@
 				<chance>0.05</chance>
 			</li>
 		</onGeneratedAddictedEvents>
+		<geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+		<geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
 	</ChemicalDef>
 	<NeedDef ParentName="DrugAddictionNeedBase">
 		<defName>MorrowRim_Chemical_Skooma</defName>
