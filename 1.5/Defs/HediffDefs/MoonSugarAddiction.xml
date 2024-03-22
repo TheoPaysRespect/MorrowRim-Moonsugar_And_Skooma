@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ChemicalDef>
+		<defName>MorrowRim_MoonSugar</defName>
+		<label>moon sugar</label>
+		<addictionHediff>MorrowRim_MoonSugarAddiction</addictionHediff>
+		<toleranceHediff>MorrowRim_MoonSugarTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+		<onGeneratedAddictedEvents>
+			<li>
+				<hediff>ChemicalDamageModerate</hediff>
+				<chance>0.05</chance>
+				<partsToAffect>
+					<li>Kidney</li>
+				</partsToAffect>
+			</li>
+		</onGeneratedAddictedEvents>
+		<geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+		<geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+	</ChemicalDef>
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>MorrowRim_Chemical_MoonSugar</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>moon sugar</label>
+		<description>Because of a moon sugar addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+		<listPriority>50</listPriority>
+	</NeedDef>
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>MorrowRim_MoonSugarTolerance</defName>
+		<label>moon sugar tolerance</label>
+		<description>A built-up tolerance to moon sugar. The more severe this tolerance is, the more moon sugar it takes to get the same effect.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.015</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>MorrowRim_MoonSugar</chemical>
+			</li>
+		</comps>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>ChemicalDamageModerate</hediff>
+				<minSeverity>0.50</minSeverity>
+				<baseMtbDays>120</baseMtbDays>
+				<partsToAffect>
+					<li>Kidney</li>
+				</partsToAffect>
+			</li>
+		</hediffGivers>
+	</HediffDef>
+	<HediffDef ParentName="AddictionBase">
+		<defName>MorrowRim_MoonSugarAddiction</defName>
+		<label>moon sugar addiction</label>
+		<description>A chemical addiction to moon sugar. Long-term presence of moon sugar has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+			\nWithout regular doses of moon sugar, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>MorrowRim_Chemical_MoonSugar</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.0333</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+				<restFallFactorOffset>0.3</restFallFactorOffset>
+				<socialFightChanceFactor>3.0</socialFightChanceFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.40</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.20</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugMajor</mentalState>
+						<mtbDays>50</mtbDays>
+					</li>
+					<li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>10</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	<ThoughtDef>
+		<defName>MorrowRim_MoonSugarWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>MorrowRim_MoonSugarAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>moon sugar withdrawal</label>
+				<description>I feel so awake, just a little bit of sugar would help.</description>
+				<baseMoodEffect>-25</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>
