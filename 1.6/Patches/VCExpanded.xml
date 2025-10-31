@@ -33,7 +33,7 @@
 						</ThingDef>
 						<ThoughtDef>
 							<defName>MorrowRim_VCE_MoonSugarHigh</defName>
-							<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+							<thoughtClass>VEF.Cooking.Thought_Hediff</thoughtClass>
 							<hediff>MorrowRim_VCE_MoonSugarHigh</hediff>
 							<validWhileDespawned>true</validWhileDespawned>
 							<stages>
@@ -44,7 +44,7 @@
 								</li>
 							</stages>
 							<modExtensions>
-								<li Class="VanillaCookingExpanded.Thought_Hediff_Extension">
+								<li Class="VEF.Cooking.Thought_Hediff_Extension">
 									<hediffToAffect>MorrowRim_MoonSugarTolerance</hediffToAffect>
 									<partToAffect>Body</partToAffect>
 									<percentage>0.015</percentage>

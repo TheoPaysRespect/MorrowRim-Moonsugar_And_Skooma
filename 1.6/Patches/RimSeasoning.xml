@@ -40,7 +40,7 @@
 						</ThingDef>
 						<ThoughtDef ParentName="RimSeasoning_Thought">
 							<defName>MorrowRim_RimSeasoning_MoonSugarHigh</defName>
-							<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+							<thoughtClass>VEF.Cooking.Thought_Hediff</thoughtClass>
 							<hediff>MorrowRim_RimSeasoning_MoonSugarHigh</hediff>
 							<validWhileDespawned>true</validWhileDespawned>
 							<stages>
